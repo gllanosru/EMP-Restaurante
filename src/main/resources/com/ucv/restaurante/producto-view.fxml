@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.ucv.restaurante.controller.ProductoController">
+    <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+    <Label text="Restaurante | Productos" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+    <HBox spacing="8">
+        <TextField fx:id="txtFiltro" promptText="Buscar por nombre o categoría" HBox.hgrow="ALWAYS"/>
+        <Button text="Buscar" onAction="#onBuscar"/>
+    </HBox>
+    <HBox spacing="8" alignment="CENTER_LEFT">
+        <Button text="+ Nuevo producto" onAction="#onNuevo"/>
+        <Button text="Editar" onAction="#onEditar"/>
+        <Button text="Eliminar" onAction="#onEliminar"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Label fx:id="lblTotal" text="Total: 0 producto(s)"/>
+    </HBox>
+    <TableView fx:id="tablaProductos" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="60"/>
+            <TableColumn fx:id="colNombre" text="Producto" prefWidth="180"/>
+            <TableColumn fx:id="colCategoria" text="Categoria" prefWidth="130"/>
+            <TableColumn fx:id="colPrecio" text="Precio" prefWidth="90"/>
+            <TableColumn fx:id="colStock" text="Stock" prefWidth="80"/>
+            <TableColumn fx:id="colActivo" text="Activo" prefWidth="80"/>
+        </columns>
+    </TableView>
+</VBox>

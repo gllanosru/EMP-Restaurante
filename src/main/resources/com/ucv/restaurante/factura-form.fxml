@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.ucv.restaurante.controller.FacturaFormController">
+    <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+    <Label text="Pedido:"/>
+    <ComboBox fx:id="cmbPedido" maxWidth="Infinity" promptText="Seleccione un pedido"/>
+    <Label text="Tipo de comprobante:"/>
+    <ComboBox fx:id="cmbTipoComprobante" maxWidth="Infinity"/>
+    <Label text="Cliente:"/>
+    <TextField fx:id="txtCliente"/>
+    <Label text="RUC/DNI:"/>
+    <TextField fx:id="txtDocumento"/>
+    <Label text="Total:"/>
+    <TextField fx:id="txtTotal" editable="false"/>
+    <Label text="Estado:"/>
+    <ComboBox fx:id="cmbEstado" maxWidth="Infinity"/>
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Cancelar" onAction="#onCancelar"/>
+        <Button text="Guardar" onAction="#onGuardar"/>
+    </HBox>
+</VBox>

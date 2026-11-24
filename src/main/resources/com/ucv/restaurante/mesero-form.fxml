@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.ucv.restaurante.controller.MeseroFormController">
+    <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+    <Label text="Nombres:"/>
+    <TextField fx:id="txtNombres"/>
+    <Label text="DNI (8 dígitos):"/>
+    <TextField fx:id="txtDni"/>
+    <Label text="Teléfono:"/>
+    <TextField fx:id="txtTelefono"/>
+    <CheckBox fx:id="chkActivo" text="Activo"/>
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Cancelar" onAction="#onCancelar"/>
+        <Button text="Guardar" onAction="#onGuardar"/>
+    </HBox>
+</VBox>

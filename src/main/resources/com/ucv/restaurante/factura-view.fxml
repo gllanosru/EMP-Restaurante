@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.ucv.restaurante.controller.FacturaController">
+    <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+    <Label text="Restaurante | Facturas" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+    <HBox spacing="8">
+        <TextField fx:id="txtFiltro" promptText="Buscar cliente, RUC o estado" HBox.hgrow="ALWAYS"/>
+        <Button text="Buscar" onAction="#onBuscar"/>
+    </HBox>
+    <HBox spacing="8" alignment="CENTER_LEFT">
+        <Button text="+ Nueva factura" onAction="#onNuevo"/>
+        <Button text="Editar" onAction="#onEditar"/>
+        <Button text="Eliminar" onAction="#onEliminar"/>
+        <Button text="Ver comprobante" onAction="#onVerComprobante"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Label fx:id="lblTotal" text="Total: 0 factura(s)"/>
+    </HBox>
+    <TableView fx:id="tablaFacturas" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="60"/>
+            <TableColumn fx:id="colPedido" text="Pedido" prefWidth="80"/>
+            <TableColumn fx:id="colTipoComprobante" text="Tipo" prefWidth="100"/>
+            <TableColumn fx:id="colCliente" text="Cliente" prefWidth="170"/>
+            <TableColumn fx:id="colDocumento" text="RUC/DNI" prefWidth="120"/>
+            <TableColumn fx:id="colTotal" text="Total" prefWidth="90"/>
+            <TableColumn fx:id="colEstado" text="Estado" prefWidth="110"/>
+            <TableColumn fx:id="colFecha" text="Fecha" prefWidth="180"/>
+        </columns>
+    </TableView>
+</VBox>
